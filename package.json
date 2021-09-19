@@ -1,32 +1,78 @@
 {
-  "name": "coma",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server/index.js",
-    "dev": "webpack --mode development && node server/index.js",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dv": "webpack-dev-server --mode development --hot --open"
+  "name": "Comic",
+  "version": "0.1.0",
+  "description": "Starter kit for React, Webpack (with Hot Module Replacement) and Babel.",
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "sass",
+    "hmr",
+    "starter",
+    "boilerplate"
+  ],
+  "author": "Viktor Persson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikpe/react-webpack-babel-starter.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "react-dom": "^17.0.2"
+  "bugs": {
+    "url": "https://github.com/vikpe/react-webpack-babel-starter/issues"
+  },
+  "homepage": "https://github.com/vikpe/react-webpack-babel-starter",
+  "scripts": {
+    "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
+    "clean-dist": "rimraf dist/*",
+    "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
+    "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
+    "start": "yarn run start-dev",
+    "start-dev": "webpack serve --config=configs/webpack/dev.js",
+    "start-prod": "yarn run build && node express.js",
+    "test": "jest --watchAll --coverage --config=configs/jest.json"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
+    "@hot-loader/react-dom": "^17.0.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.2.0",
     "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "css-loader": "^6.2.0",
+    "enzyme": "^3.11.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
-    "nodemon": "^2.0.12",
-    "nodemon-webpack-plugin": "^4.5.2",
-    "webpack": "^5.53.0",
+    "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^27.2.0",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
+    "react-router-dom": "^5.3.0",
+    "react-test-renderer": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1"
+    "webpack-dev-middleware": "^5.1.0",
+    "webpack-dev-server": "^4.2.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@rebass/preset": "^4.0.5",
+    "@reduxjs/toolkit": "^1.6.1",
+    "emotion-theming": "^11.0.0",
+    "express": "^4.17.1",
+    "react-redux": "^7.2.5",
+    "rebass": "^4.0.7",
+    "redux": "^4.1.1"
   }
 }

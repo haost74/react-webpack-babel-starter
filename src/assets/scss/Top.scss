@@ -1,0 +1,27 @@
+.div-top{
+
+    height: 100%;
+    width: 100%;
+
+    display: block;
+    //margin-right: auto;
+    //margin-left: 50%;
+
+    // vertical-align: text-bottom;
+    // white-space: nowrap;
+
+    // //display:table-cell;
+
+    // @media (min-width: 600px) {
+    //     font-size: 3.1vw;
+    // }
+}
+
+.img-logo{
+    float: right;
+    height: 50px;
+
+     @media (min-width: 600px) {
+        height: 150px;
+    }
+}

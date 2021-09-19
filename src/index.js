@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js'
-    const Index = () => {
-        return <App/>;
-    };
-    ReactDOM.render(<Index />,document.getElementById('app'));
+import { render } from 'react-dom';
+import App from 'components/App';
+
+const rootEl = document.getElementById('root');
+
+render(<App />, rootEl);
