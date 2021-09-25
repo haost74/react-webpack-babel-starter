@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "Comic",
+=======
+  "name": "react-webpack-babel-starter",
+>>>>>>> a2ca32b80a516e0c6d8abedb99495aa16020294d
   "version": "0.1.0",
   "description": "Starter kit for React, Webpack (with Hot Module Replacement) and Babel.",
   "keywords": [
@@ -67,6 +71,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@rebass/preset": "^4.0.5",
     "@reduxjs/toolkit": "^1.6.1",
     "emotion-theming": "^11.0.0",
@@ -74,5 +79,8 @@
     "react-redux": "^7.2.5",
     "rebass": "^4.0.7",
     "redux": "^4.1.1"
+=======
+    "express": "^4.17.1"
+>>>>>>> a2ca32b80a516e0c6d8abedb99495aa16020294d
   }
 }
